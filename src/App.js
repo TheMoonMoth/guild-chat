@@ -36,7 +36,7 @@ class App extends React.Component {
           {/* <UserSelect firestore={firestore} /> */}
         </header>
         <ChatStream firestore={firestore} currentUserId={this.state.currentUserId} />
-        <ChatForm />
+        <ChatForm firestore={firestore} currentUserId={this.state.currentUserId} />
       </div>
     );
   }
