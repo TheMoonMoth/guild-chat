@@ -28,12 +28,16 @@ class App extends React.Component {
     }
   }
 
+  toggleCurrentUserId = () => {
+    this.setState({ currentUserId: this.state.currentUserId === '1111' ? '2222' : '1111' })
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>Guild Chat</h1>
-          {/* <UserSelect firestore={firestore} /> */}
+          <UserSelect toggleCurrentUserId={this.toggleCurrentUserId} />
         </header>
         <ChatStream firestore={firestore} currentUserId={this.state.currentUserId} />
         <ChatForm firestore={firestore} currentUserId={this.state.currentUserId} />
