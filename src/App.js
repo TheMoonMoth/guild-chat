@@ -6,6 +6,7 @@ import 'firebase/firestore';
 
 import UserSelect from './components/UserSelect';
 import ChatStream from './components/ChatStream';
+import ChatForm from './components/ChatForm';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAIpvlFZZ9385eVtMnVSbLh68Rz3OceDLE",
@@ -19,16 +20,26 @@ firebase.initializeApp({
 
 const firestore = firebase.firestore();
 
-function App() {
-  return (
-    <div>
-      <header className="App-header">
-        <h1>Guild Chat</h1>
-        <UserSelect firestore={firestore} />
-      </header>
-      <ChatStream firestore={firestore} />
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      currentUserId: '1111',
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Guild Chat</h1>
+          {/* <UserSelect firestore={firestore} /> */}
+        </header>
+        <ChatStream firestore={firestore} currentUserId={this.state.currentUserId} />
+        <ChatForm />
+      </div>
+    );
+  }
 }
 
 export default App;

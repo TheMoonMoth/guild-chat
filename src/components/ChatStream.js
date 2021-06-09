@@ -11,7 +11,13 @@ const ChatStream = (props) => {
 
   return (
     <>
-      {messages?.map(message => <ChatMessage messageInfo={message} key={message.userId} />)}
+      {messages?.map(message => (
+        <ChatMessage
+          messageInfo={message}
+          key={message.userId}
+          currentUserId={props.currentUserId}
+        />
+      ))}
     </>
   )
 }

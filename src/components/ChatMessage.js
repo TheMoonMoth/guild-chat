@@ -1,8 +1,9 @@
-import React from 'react';
+import './styles.css';
 
-const ChatMessage = ({ messageInfo }) => {
+const ChatMessage = ({ messageInfo, currentUserId }) => {
+  const messageClassName = messageInfo.clientId === currentUserId ? 'sent' : 'received';
   return (
-    <p>{messageInfo.message}</p>
+    <p className={messageClassName}>{messageInfo.message}</p>
   )
 }
 

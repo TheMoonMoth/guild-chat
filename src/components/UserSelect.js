@@ -8,7 +8,7 @@ const UserSelect = (props) => {
 
   return (
     <div>
-      {users?.map(usr => <p>{usr.name}</p>)}
+      {users?.map(usr => <p key={usr.id}>{usr.name}</p>)}
     </div>
   )
 }
