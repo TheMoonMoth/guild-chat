@@ -7,9 +7,6 @@ import 'firebase/firestore';
 import UserSelect from './components/UserSelect';
 import ChatStream from './components/ChatStream';
 
-import Users from './mock_data/users.json'
-
-
 firebase.initializeApp({
   apiKey: "AIzaSyAIpvlFZZ9385eVtMnVSbLh68Rz3OceDLE",
   authDomain: "guild-chat-f102b.firebaseapp.com",
@@ -23,12 +20,11 @@ firebase.initializeApp({
 const firestore = firebase.firestore();
 
 function App() {
-  const userList = Users;
   return (
     <div>
       <header className="App-header">
         <h1>Guild Chat</h1>
-        {/* <UserSelect users={userList} /> */}
+        <UserSelect firestore={firestore} />
       </header>
       <ChatStream firestore={firestore} />
     </div>
