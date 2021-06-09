@@ -44,3 +44,13 @@
   text-align: center;
   flex-grow: 1;
 }
+
+.userToggle {
+  all: unset;
+  background-color: lightcoral;
+  text-align: center;
+  height: 80%;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+}

@@ -1,7 +1,9 @@
+import './styles.css'
+
 const UserSelect = (props) => {
   return (
     <div>
-      <button onClick={e => props.toggleCurrentUserId()}>Change User</button>
+      <button className="userToggle" onClick={e => props.toggleCurrentUserId()}>Toggle User</button>
     </div>
   )
 }
