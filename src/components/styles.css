@@ -1,7 +1,23 @@
+.chatStream {
+  padding: 20px;
+  font-size: 1.2rem;
+  background-color: lightgrey;
+}
+
+.messageContainer {
+  border-radius: 10px;
+  padding: 5px 20px;
+  line-height: 1.5rem;
+}
+
 .sent {
-  color: blue;
+  background-color: rgba(0, 0, 139, .2);
+  text-align: right;
+  margin-left: 100px;
 }
 
 .received {
-  color: red;
+  background-color: rgba(139, 0, 0, .2);
+  text-align: left;
+  margin-right: 100px;
 }

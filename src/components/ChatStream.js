@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 import ChatMessage from './ChatMessage'
@@ -10,7 +11,7 @@ const ChatStream = (props) => {
   const [messages] = useCollectionData(query, {idField: 'userId'})
 
   return (
-    <>
+    <div className="chatStream">
       {messages?.map(message => (
         <ChatMessage
           messageInfo={message}
@@ -18,7 +19,7 @@ const ChatStream = (props) => {
           currentUserId={props.currentUserId}
         />
       ))}
-    </>
+    </div>
   )
 }
 

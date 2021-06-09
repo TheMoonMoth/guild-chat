@@ -24,7 +24,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentUserId: '1111',
+      currentUserId: '2222',
     }
   }
 
