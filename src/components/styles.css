@@ -1,5 +1,6 @@
 .chatStream {
   padding: 20px;
+  height: 100%;
   font-size: 1.2rem;
   background-color: lightgrey;
 }
@@ -20,4 +21,26 @@
   background-color: rgba(139, 0, 0, .2);
   text-align: left;
   margin-right: 100px;
+}
+
+.chatForm {
+  all: unset;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.chatInput {
+  all: unset;
+  flex-grow: 8;
+  height: 30px;
+  background-color: darkgrey;
+  padding: 20px
+}
+
+.chatSubmit {
+  all: unset;
+  background-color: lightcoral;
+  text-align: center;
+  flex-grow: 1;
 }
